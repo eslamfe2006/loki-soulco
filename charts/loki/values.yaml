@@ -167,6 +167,7 @@ persistence:
   enabled: true
   accessModes:
   - ReadWriteOnce
+  storageClassName: "manual"
   size: 13Gi
   annotations: {}
   # selector:
