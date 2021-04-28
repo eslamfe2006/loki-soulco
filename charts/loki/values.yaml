@@ -232,7 +232,10 @@ terminationGracePeriodSeconds: 4800
 
 ## Tolerations for pod assignment
 ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
-tolerations: []
+tolerations: 
+- key: "node-role.kubernetes.io/master"
+      operator: "Exists"
+      effect: "NoSchedule"
 
 # The values to set in the PodDisruptionBudget spec
 # If not set then a PodDisruptionBudget will not be created
